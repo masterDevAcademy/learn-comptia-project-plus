@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header.jsx";
+import Lessons from "./pages/Lessons.jsx";
+import PracticeTests from "./pages/PracticeTests.jsx";
+import Test01 from "./pages/Test01.jsx";
+import Test02 from "./pages/Test02.jsx";
+import Test03 from "./pages/Test03.jsx";
+
+export default function App() {
+  const [search, setSearch] = useState("");
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{ color: "white" }}>
+      <Header searchValue={search} onSearchChange={setSearch} />
 
-export default App
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main style={{ padding: 24 }}>
+              <h2>Welcome 👋</h2>
+              <p>Use the nav to open Lessons or Practice Tests.</p>
+              <p style={{ opacity: 0.8 }}>
+                Search term: <code>{search || "(none)"}</code>
+              </p>
+            </main>
+          }
+        />
+
+        <Route path="/lessons" element={<Lessons />} />
+
+        {/* Practice Tests overview + 3 individual tests */}
+        <Route path="/practice-tests" element={<PracticeTests />} />
+        <Route path="/practice-tests/test-01" element={<Test01 />} />
+        <Route path="/practice-tests/test-02" element={<Test02 />} />
+        <Route path="/practice-tests/test-03" element={<Test03 />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
