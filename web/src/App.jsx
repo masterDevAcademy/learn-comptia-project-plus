@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 import Header from "./components/Header.jsx";
-import Lessons from "./pages/Lessons.jsx";
+import Lessons from "./pages/ProjectManagement/ProjectPlusPage.jsx";
 import PracticeTests from "./pages/PracticeTests.jsx";
 import Test01 from "./pages/Test01.jsx";
 import Test02 from "./pages/Test02.jsx";

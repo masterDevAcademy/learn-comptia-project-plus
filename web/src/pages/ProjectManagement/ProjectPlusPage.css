@@ -1,0 +1,193 @@
+.projectplus-page {
+  display: flex;
+  min-height: 100vh;
+  color: #e2e8f0;
+}
+
+/* Sidebar */
+.projectplus-page .sidebar {
+  width: 240px;
+  background: #1e293b; /* dark slate */
+  padding: 20px;
+  border-right: 1px solid #334155;
+}
+
+.projectplus-page .sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projectplus-page .sidebar li {
+  padding: 12px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.projectplus-page .sidebar li:hover {
+  background: #334155;
+  color: white;
+}
+
+.projectplus-page .sidebar li.active {
+  background: #3b82f6; /* blue highlight */
+  color: white;
+}
+
+/* Main Content */
+.projectplus-page .lesson-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.projectplus-page .lesson-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 10px 0;
+}
+
+
+.projectplus-page .lesson-navigation button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.projectplus-page .lesson-navigation button:hover {
+  background: #3b82f6;
+  border-color: #3b82f6;
+}
+
+.projectplus-page .lesson-navigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Lesson body */
+.projectplus-page .lesson-body {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  max-width: 900px;
+}
+
+/* Main lesson headings */
+.lesson-body h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f8fafc;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+}
+
+/* Section headings */
+/* Main lesson headings */
+.lesson-body h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #f8fafc;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+}
+
+/* Section headings */
+.lesson-body h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #93c5fd; /* softer blue accent */
+}
+
+/* Paragraph spacing */
+.lesson-body p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Lists */
+.lesson-body ul {
+  margin: 15px 0 20px 20px;
+  color: #cbd5e1;
+}
+
+.lesson-body li {
+  margin-bottom: 8px;
+}
+
+
+/* Paragraph spacing */
+.lesson-body p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Lists */
+.lesson-body ul {
+  margin: 15px 0 20px 20px;
+  color: #cbd5e1;
+}
+
+.lesson-body li {
+  margin-bottom: 8px;
+}
+
+
+.lesson-body p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Centering container */
+.table-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Table styling */
+.pm-table {
+  border-collapse: collapse;
+  min-width: 600px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Header */
+.pm-table th {
+  background: #3b82f6;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Cells */
+.pm-table td {
+  padding: 12px;
+  border-top: 1px solid #334155;
+  color: #cbd5e1;
+}
+
+/* Row hover effect */
+.pm-table tbody tr:hover {
+  background: #334155;
+}
